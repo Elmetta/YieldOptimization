@@ -1,0 +1,18 @@
+% !TEX root = Vorlage_EN.tex
+\section{Blockchain}
+In general
+
+The blockchain technology is an instrument for the reproducible assurance of transactions and block creation which protects its integrity by operating in a decentralized way. The idea is to replicate the blockchain multiple times but identically by participants who can permanently compare their versions of the blockchain to each other. Therefor fraudsters who want to manipulate the blockchain for their own goods can be spotted quickly and a consensus on the legitimate transaction ledger be built. 
+The growth of the blockchain is given by producing new blocks that matches the cryptographic requirements of the chain. Because all the blocks including the hash value and its signature of the previous block, previous blocks can’t be changed afterwards without changing their hash values as well. In conclusion it forms a chain of blocks which are interdependent. Next to the Block Header which includes the metadata for such block there is also the Block Data which holds the information specific for each blockchain type.
+Since different blockchains differs in their usage and mechanism of producing new blocks, block size and contained information in the Block Data can diversify.
+Well known mechanisms for block production are “Proof of Work” and “Proof of Stake”.
+
+Classification
+
+Blockchains can be distinguished in a few different types which differ in anonymity/ pseudonymity and level of authorization they provide. The first three types are concerned with the in anonymity/ pseudonymity while the last two apply to the authorization level.
+Public: Public Blockchains managing themselves in a decentralized, independent way like in the explanation above where multiple independent individuals administer the blockchain. The participants don’t know each other and have a certain amount of mutual distrust.
+Private: In case of private blockchains the blockchain is managed by one organisation. Read permissions may be public but writing to the blockchain is a reserve privilege to internal organisation’s members \cite{Shermin2017}.
+Federated: Rather unrecognized are federated blockchains which are organized by groups with a pre-defined set of nodes. According to Voshmgir and Kalinov it can be described by “a consortium of 15 financial institutions, each of which operates a node and of which 10 must sign every block in order for the block to be valid” \cite{Shermin2017}.
+Permissionless: Permissionless prescribe no further conditions for participation. Everyone who has the resources for validating a new block can take part without proving one’s identity. 
+Permissioned: In contrast permissioned blockchain tie their members to certain prerequisites which must be satisfied first.
+Several combinations of these types are possible. For example, a private permissioned blockchain needs its validators to be an employee or a selected agent by the company. On a public permissionless blockchains like Bitcoin everyone can take part in producing new blocks without restrictions. In case of a public permissioned one like  all “Proof of Stake” chains everyone can validate transactions if they fulfil particular criteria~\cite{Shermin2017}. For the new Ethereum 2.0 version (which is not released up to this date Dez 2021) one has to have at least 32 ETH to be a validator.

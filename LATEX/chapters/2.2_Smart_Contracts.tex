@@ -1,0 +1,14 @@
+% !TEX root = Vorlage_EN.tex
+\section{Smart Contracts}
+Grech 2017 describes smart contracts as “effectively small computer programmes stored on a blockchain, which will perform a transaction under specified conditions”~\cite{GrechAlexander2017}. Smart contracts are triggered automatically if this condition applies. According to Mitschele~\cite{Mitschele2019} the concept is comparable to a vending machine, which spends the drink after insert a certain amount of money or gives your change back if it was not enough or it ran out of the product. Even though the contract is self-executing usually there is an instance of activation. For example, a spender who wants to interact with the smart contract must provide the needed amount of money for gas and the purchase itself so the contract can check for this condition and executes itself as a consequence. Smart contracts can also be triggered by other contracts.
+Because of the “conditions, and Ether balance” which are administered by the contracts themselves Meinel and Gayvoronskaya pointed out that smart contracts can rather be described as “autonomous agents” instead of “cryptographic “boxes” with specific values that can only be unlocked if certain conditions are met.“~\cite{meinel2018blockchain}
+No matter what definition is used, smart contracts comply the characteristics of self-verifying, self-executing and tamper resistant~\cite{Shermin2017}. Furthermore smart contracts can "Turn legal obligations into automated processes", "Guarantee greater degree of security", "Decreasing reliance on trusted intermediaries" and "Lower transaction costs"~\cite{Shermin2017}.
+
+The use case of smart contracts are diverse/manifold?. It range from simple governmental registries up to provisioning of external informations to execute the contract thorugh oracles. Performing digital value exchange or NFT minting is one of the simplest implementations of smart contracts and the complexity can rise according to its use case.
+For this Thesis the implementation of smart contracts as decentralized Applications (dApps) is important. According to Vitalis Buterin, decentralized apps are the combination of “low-level business logic components”~\cite{buterin2014next} and “high-level graphical user“~\cite{buterin2014next} interfaces. Which brings together the smart contract backend and the user interface frontend.
+
+
+Since the contract is stored on the blockchain one can not change the code if it is once deployed. Therefor it is highly important to test the code onto every possible occurrence of errors and eliminate them before deploying. 
+“For smart contracts to become a viable commercial tool, they must be not only technically but also legally enforceable“~\cite{mik2017smart}.
+
+
