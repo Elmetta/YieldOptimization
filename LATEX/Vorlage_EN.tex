@@ -1,0 +1,172 @@
+\documentclass[a4paper,12pt]{book}
+%%% OPTMIZATION FOR ePRINT: onesided,openany
+
+\usepackage[english]{babel}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc} %CHANGE TO latin1 IF YOU HAVE PROBLEMS WITH UMLAUTS
+\usepackage{lmodern}
+
+%% Deutsche Absätze ohne Einschub, mit Abstand
+%\setlength{\parindent}{0em}
+%\setlength{\parskip}{0ex plus0.5ex}
+
+%%% ADJUST PAGE MARGINS HERE
+\usepackage[
+	a4paper,
+	includehead,
+	left=18mm,
+	right=18mm,
+	top=15mm,
+	bottom=20mm,
+	headsep=25mm,
+]{geometry}
+
+\usepackage{fancyhdr} %Package fancyhdr
+
+% Packages für Grafiken & Abbildungen
+\usepackage{graphicx}
+
+%xcolor
+\usepackage{xcolor}
+
+\usepackage{bbm}
+\usepackage{amsthm}
+%\usepackage{amstext}
+%\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+%\usepackage{latexsym}
+
+%\usepackage[absolute,overlay]{textpos} %absolute Positionierung von boxes auf der Seite
+
+% Paket zur Darstellung von Code
+%\usepackage{listings}
+
+% Paket hyperref sollte als letztes geladen werden
+\usepackage[raiselinks=true,
+  pdftex,colorlinks,bookmarks,
+  bookmarks=true,
+  bookmarksopenlevel=1,
+  bookmarksopen=true,
+  bookmarksnumbered=true,
+  hyperindex=true,
+  plainpages=false,
+  pdfpagelabels=true,
+  pdfborder={0 0 0.5}]{hyperref}
+
+%%% Hyphenation %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\hyphenation{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% -------------------------------
+%% |      Globale Settings       |
+%% -------------------------------
+\setcounter{secnumdepth}{3} % Numbering also for \subsubsections
+\setcounter{tocdepth}{3}    % Register \subsubsections in content directory
+
+\linespread{1.5} %mehrfacher Zeilenabstand
+
+\makeatletter
+\AtBeginDocument{
+%%% Setup for hyperref
+  \hypersetup{
+    pdftitle = {\@title},
+    pdfauthor = {\@author}
+  }
+	
+%%% Setup for fancyhdr
+\pagestyle{fancy} %eigener Seitenstil
+\fancyhf{} %alle Kopf- und Fußzeilenfelder bereinigen
+\fancyhead[L]{\@title} %Kopfzeile links
+\fancyhead[R]{\nouppercase{\leftmark}} %zentrierte Kopfzeile
+\renewcommand{\headrulewidth}{0.4pt} %obere Trennlinie
+\fancyfoot[L]{} 
+\fancyfoot[C]{\thepage} %Seitennummer
+\renewcommand{\footrulewidth}{0.4pt} %untere Trennlinie
+
+%%Unterschied zwischen geraden/ungeraden Seiten:
+%\fancyhead[OR]{} % "O" steht für "odd", also ungerade Seiten
+%\fancyhead[ER]{} % "E" für "even", also gerade Seiten.
+}
+\makeatother
+
+
+%% --- End of global Settings ---
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% DOCUMENT - Skript
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{}
+\author{}
+\date{}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Frontmatter %%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frontmatter
+
+%\include{titlepage}
+\maketitle
+
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Mainmatter %%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mainmatter
+
+\chapter{Introduction}
+\input{chapters/1.1_Background}
+\input{chapters/1.2_Motivation}
+
+
+\chapter{Theoretical Background}
+\input{chapters/2.1_Blockchain.tex}
+\input{chapters/2.2_Smart_Contracts.tex}
+\input{chapters/2.3_Ethereum_Chain.tex}
+
+\input{chapters/2.6_DEFI.tex}
+
+
+%%%MATHE%%%
+% https://ei.hs-duesseldorf.de/personen/braun/lehre/Documents/LaTeX%20SS17/Latex%2008%20-%20Formeln.pdf
+
+\begin{equation}
+n_1 \sin \alpha = n_2 \sin \beta
+S_2>e_1\cdot e_2
+\end{equation}
+\begin{equation}
+E_1
+\end{equation}
+\begin{equation}
+E1
+\end{equation}
+\begin{equation}
+<>+-/()!= \cdot \alpha \beta \gamma \sin \log
+\end{equation}
+\begin{equation}
+R^{M}
+\end{equation}
+\begin{equation}
+R^{M \cdot R^L}
+\end{equation}
+
+
+
+%%%MATHE%ENDE%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Backmatter %%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\backmatter
+\appendix
+
+\bibliographystyle{IEEEtran}
+\bibliography{./references/references}
+
+\end{document}
